@@ -7,19 +7,15 @@
 			<h1><a href="">My Programming Story</a></h1>
 		</div>
 
+	{% for post in posts %}
 		<div>
-			
-			<h2><a href="">My First post</a></h2>
-			<p>published 17.07.2015, 14:20</p>
-			<p>Programming is frustrating to me.</p>
+			<p>published: {{post.published_date }}</p>
+			<h1><a href="">{{ post.title }}</a></h1>
+			<p>{{ post.text|linebreaks }}</p>
 		</div>
+		{{ post }}
+	{% endfor %}
 
-		<div>
-			
-			<h2><a href="">My Second Post</a></h2>
-			<p>published 18.07.2015, 15:30</p>
-			<p>Am I doing this right?</p>
-		</div>
 	</body>
 </html>
 
